@@ -5,6 +5,7 @@ using namespace std;
 int main(){
     int a,b,c,x;
     float area,s;
+    cout <<"enter the sides";
    cout <<"enter side a:";
     cin >> a;
     cout <<"enter side b:";
