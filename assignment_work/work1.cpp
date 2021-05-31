@@ -11,5 +11,5 @@ using namespace std;
         cout << "positive number"<< num << endl;
     }
      cout << "enter number is valide";
+     return 0;
  }
-
