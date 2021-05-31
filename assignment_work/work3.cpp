@@ -17,6 +17,7 @@ using namespace std;
          cout <<"zero number"<< num << endl;
          
      }
+    
      cout << "enter number is valide";
      return 0;
  }
