@@ -7,7 +7,7 @@ int main(){
     cout << "enter positive number:" <<endl;
     cin>> num;
     if (num >0) {
-        cout << "enter positive number:" << num << endl;
+        cout << "positive number:" << num << endl;
     }
 
         cout << "this statement is always executed";
