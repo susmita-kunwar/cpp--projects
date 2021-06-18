@@ -19,7 +19,7 @@ class student{
     {
         if(per>45 )
         {
-            cout <<"congratulations you can here your marks:" <<endl;
+            cout <<"congratulations you can see your marks:" <<endl;
             cout <<"rollno" <<rollno <<endl;
             cout <<"name" <<name <<endl;
             cout << "per" <<per <<endl;

@@ -5,12 +5,12 @@ class interest {
     public:
     int t;
     float r,p;
-    void get()
+    void set()
     {
         cout << "enter principle amount and number of year:"<<endl;
         cin >> p >> t;
     }
-    void display(float r)
+    void get(float r)
     {
         float simple;
         simple = (p*r*t)/100;
@@ -20,8 +20,8 @@ class interest {
     int main()
     {
         interest s;
-        s.get();
-        s.display(0.15);
+        s.set();
+        s.get(15);
         return 0;
 
     }
