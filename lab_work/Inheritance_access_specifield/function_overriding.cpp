@@ -40,7 +40,7 @@ int main()
                                                // accessing function like eating from their parent class by making Dog class object d1.
     d1.eat();                                  // ie class Dog function member eat() override class Animal function member eat().
     
-    c1.milk();
+    c1.eat();
 
 
     //d1.Animal :: eat();                     // by doing this we call member function of class Animal.
