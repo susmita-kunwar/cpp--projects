@@ -20,13 +20,14 @@ class Dog : public Animal
     public:
         void eat()  
         {
-            cout <<"baqrking of Dog:"<<endl;
+            cout <<"barking of Dog:"<<endl;
         }
 };
 
 class Cow 
 {
     public:
+    void eat()
     {
         cout <<"Cow gives milk:"<<endl;
     }
