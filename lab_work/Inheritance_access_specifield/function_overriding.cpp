@@ -24,7 +24,7 @@ class Dog : public Animal
         }
 };
 
-class Cow 
+class Cow : public Animal
 {
     public:
     void eat()
