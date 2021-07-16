@@ -10,10 +10,10 @@ class student
     public:
         void getdata()
         {
-            cout <<"enter student name:"<<endl;
-            cin >>this->name;
-            cout <<"enter student rollno:"<<endl;
-            cin >>this->rollno;
+           cout <<"enter name of student :"<<endl;
+           cin >> this->name;
+           cout <<"enter rollno of student:"<<endl;
+           cin >>this->rollno;
         }
 
         void displaya()
@@ -76,37 +76,43 @@ class result : public sport, public test
          void displayd()
         {
 
-            cout << " name of student:"<<this->name<<endl;
-            cout << "rollno of student:"<<this->rollno<<endl;
-            cout <<"total marks scored in sport:"<<this->score<<endl;
-            cout <<"total marks scored by student:"<<this->total<<endl;
+            cout <<" name of student:"<<this->name<<endl;
+            cout <<" rollno of student:"<<this->rollno<<endl;
+            cout <<" total marks scored in sport:"<<this->score<<endl;
+            cout <<" total marks scored by student:"<<this->total<<endl;
         }
 
 };
 
 
 int main()
-{
+{   
+    cout<<"sport:"<<"\n"<<endl;
+    sport s1;
+    s1.getdata();
+    s1.getsport();
+    
+    cout<<"test:"<<"\n"<<endl;
+    test t1;
+    t1.getdata();
+    t1.getmarks();
+
+    cout<<"result:"<<"\n"<<endl;
     result r1;
-
     r1.getdata();
-    //r1.displaya();
-
     r1.getsport();
-   // r1.displayb();
-
     r1.getmarks();
-    //r1.displayc();
-
     r1.gettotal();
-   // r1.displayd();
-   
-   cout<<endl;
 
-   cout<<"displaying output:"<<endl;
-   r1.displaya();
-   r1.displayb();
-   r1.displayc();
+   cout<<"displaying output \n:"<<endl;
+
+   cout <<"sport:"<<"\n"<<endl;
+   s1.displayb();
+
+   cout <<"test:"<<"\n"<<endl;
+   t1.displayc();
+
+   cout <<"result:"<<"\n"<<endl;
    r1.displayd();
 
     return 0;
