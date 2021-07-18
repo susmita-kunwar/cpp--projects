@@ -8,21 +8,17 @@ class person
         int code;
     
     public:
-        void getdata()
+        void getperson()
         {
-            cout <<"enter name of vacant:"<<endl;
+            cout <<"enter the name:"<<endl;
             cin >>this->name;
-            cout <<"enter code of vacant:"<<endl;
+            cout <<"enter the code:"<<endl;
             cin >>this->code;
         }
 
-        void displaya()
-        {
-            cout << "vacant name:"<<this->name<<endl;
-            cout << "vacant code:"<<this->code<<endl;
-        } 
-
 };
+
+
 
 class Admin : public virtual person                                       // derived class
 {
@@ -36,13 +32,6 @@ class Admin : public virtual person                                       // der
             cin >>this->experience;
         }
 
-        void displayb()
-        {
-            cout << "vacant name:"<<this->name<<endl;
-            cout << "vacant code:"<<this->code<<endl;
-            cout <<"experience required for vacant:"<<this->experience<<endl;
-        } 
-
 };
 
 class Account : public virtual person                                       //derived class
@@ -52,15 +41,15 @@ class Account : public virtual person                                       //de
     public:
         void getaccount()
         {
-            cout <<"enter payment for first month:"<<endl;
+            cout <<"enter payment :"<<endl;
             cin >>this->pay;
         }
 
        void displayc()
         {
-            cout << "vacant name:"<<this->name<<endl;
-            cout << "vacant code:"<<this->code<<endl;
-            cout <<"payment for first month:"<<this->pay<<endl;
+            cout <<"Name:"<<this->name<<endl;
+            cout <<"Code:"<<this->code<<endl;
+            cout <<"payment:"<<this->pay<<endl;
         } 
 
 };
@@ -71,26 +60,12 @@ class Master : public Admin, public Account
     int code,experience;
     float pay;
     public:
-        void getmaster()
+         void details()
         {
-            cout <<"enter name of master:"<<endl;
-            cin >>this->name;
-            cout <<"enter code of master:"<<endl;
-            cin >>this->code;
-            cout <<"enter experience required:"<<endl;
-            cin >>this->experience;
-            cout <<"enter payment for first month:"<<endl;
-            cin >>this->pay;
-            
-        }
-
-         void update()
-        {
-
-            cout << " name of student:"<<this->name<<endl;
-            cout << "rollno of student:"<<this->code<<endl;
-            cout <<"total marks scored in sport:"<<this->experience<<endl;
-            cout <<"total marks scored by student:"<<this->pay<<endl;
+            cout << " name :"<<this->name<<endl;
+            cout << "code:"<<this->code<<endl;
+            cout <<"total experience required:"<<this->experience<<endl;
+            cout <<"total payment :"<<this->pay<<endl;
         }
 
 };
@@ -99,27 +74,23 @@ class Master : public Admin, public Account
 int main()
 {
     Master m;
+    char choice;
+    do
+    {
+        m.getperson();
+        m.getadmin();
+        m.getaccount();
 
-    m.getdata();
-    //r1.displaya();
+        cout<<"If you want to update the register your data please say Y/N ?"<<endl;
+        cin >>choice;
+        cin.ignore();
+    } while (choice=='Y' || choice =='Y');
 
-    m.getadmin();
-   // r1.displayb();
+    system("cls");
 
-    m.getaccount();
-    //r1.displayc();
-
-    m.getmaster();
-   // r1.displayd();
-   
-   cout<<endl;
-
-   cout<<"displaying output:"<<endl;
-   m.displaya();
-   m.displayb();
-   m.displayc();
-   m.update();
-
-    return 0;
-
+    cout <<"displaying the data registered:"<<endl;
+    m.details();
 }
+    
+
+    
