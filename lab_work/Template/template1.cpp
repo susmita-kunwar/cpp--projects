@@ -25,8 +25,9 @@ int main()
 
     cout <<"enter two character is :";
     cin >>c1>>c2;
-    cout <<Large(c1, c2) <<"is large:"<<endl;
+    cout <<Large(c1, c2) <<"has large ASCII value."<<endl;  // This call is equivalent to Large<char, char>(c1, c2)
+                                                            // mixing the data types
+    return 0;                                               // cout<<"can we mix the datatypes?"<<Large(i1, f1);
+    }
 
-    return 0;
-}
-
+    // If two characters are passed to function template, character with larger ASCII value is displayed.
